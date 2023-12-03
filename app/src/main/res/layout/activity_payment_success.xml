@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentSuccess"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/secondary">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_checked"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Successful"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/white"
+        android:textSize="22sp"/>
+
+    <ScrollView
+        android:id="@+id/sv_payment"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/ly_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/secondary"
+        android:background="@drawable/button_bg2"/>
+
+</LinearLayout>

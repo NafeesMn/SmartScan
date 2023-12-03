@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanBarcode"
+    android:background="#2B2D55">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Start shopping"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Search for the barcode on the packaging of item"
+            android:layout_marginTop="21dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:autoFocusButtonColor="@color/white"
+            app:autoFocusButtonVisible="true"
+            app:autoFocusButtonPosition="bottomEnd"
+            app:autoFocusButtonPaddingHorizontal="52dp"
+            app:flashButtonColor="@color/white"
+            app:flashButtonVisible="true"
+            app:flashButtonPosition="bottomStart"
+            app:flashButtonPaddingHorizontal="52dp"
+            app:maskColor="#2B2D55"
+            />
+
+        <TextView
+            android:id="@+id/tv_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scanner_view"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:textAlignment="center"
+            android:text="Properly scan the barcode inside \nthe square frame"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_sheets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/rounded">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_up"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_keyboard_arrow_up_24"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:tabIndicatorColor="@color/main"
+                app:tabTextColor="@color/main"
+                app:tabGravity="fill"
+                app:tabInlineLabel="true"
+                app:tabMode="fixed">
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="true"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

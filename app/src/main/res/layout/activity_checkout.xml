@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wallet="http://schemas.android.com/apk/res-auto"
+    tools:context=".Checkout">
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="25sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/ll"
+        android:layout_above="@id/coordlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:id="@+id/parentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordlay"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:background="@color/main"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/fl_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:elevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total: RM"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/btmsheet_totalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <com.google.android.gms.wallet.button.PayButton
+                    android:id="@+id/google_pay_payment_button"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

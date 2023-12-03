@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_itemImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_prodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/main"/>
+            <TextView
+                android:id="@+id/tv_prodQty_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ProdQty | Brand"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/secondary"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x2"
+                android:textColor="@color/main"
+                android:textSize="30sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

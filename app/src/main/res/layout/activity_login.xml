@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/secondary">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="55sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="Login with your existing account"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shoppingpeople"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/etEmailLog"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:background="@drawable/button_bg2"
+        android:paddingLeft="34dp"
+        android:layout_marginTop="47dp"
+        android:textColor="@color/secondary"
+        android:ems="10"
+        android:textColorHint="@color/secondary"
+        android:hint="e-mail"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/etPasswordLog"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:background="@drawable/button_bg2"
+        android:textColor="@color/secondary"
+        android:paddingLeft="34dp"
+        android:textColorHint="@color/secondary"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etEmailLog"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEmailLog"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailLog" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg3"
+        android:layout_marginTop="79dp"
+        android:text="Login"
+        android:textSize="17sp"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLog" />
+
+    <TextView
+        android:id="@+id/RegisterNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/white"
+        android:text="Don't have an account? Register now"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

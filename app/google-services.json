@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "600705468138",
+    "project_id": "smartscan-database",
+    "storage_bucket": "smartscan-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600705468138:android:9fde85b5267cc35150b993",
+        "android_client_info": {
+          "package_name": "com.example.smartscan_beta_v01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600705468138-h0mgoa6c1m6cvurbv4gg1hsnocpm0pi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTC_zyGCYSPq073VdeBg67BOApd2lCF28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600705468138-h0mgoa6c1m6cvurbv4gg1hsnocpm0pi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
